@@ -8,7 +8,6 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "postbuild": "npm run prisma:push",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "dev": "nest start --watch",
@@ -17,7 +16,8 @@
     "prisma:gen": "prisma generate",
     "prisma:pull": "prisma db pull",
     "prisma:push": "prisma db push",
-    "prisma:format": "prisma format"
+    "prisma:format": "prisma format",
+    "postinstall": "npm run prisma:generate"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
