@@ -4,9 +4,13 @@ import { ArticleController } from './controllers/article.controller';
 import { TagController } from './controllers/tag.controller';
 import { CategoryController } from './controllers/category.controller';
 
+import { ArticleService } from './services/article.service';
+import { TagService } from './services/tag.service';
+import { CategoryService } from './services/catagory.service';
+
 @Module({
   imports: [PrismaModule],
   controllers: [ArticleController, TagController, CategoryController],
-  providers: [],
+  providers: [ArticleService, CategoryService, TagService],
 })
 export class AppModule {}

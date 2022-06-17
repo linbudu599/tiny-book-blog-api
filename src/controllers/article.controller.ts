@@ -1,10 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
 import { ArticleService } from '../services/article.service';
 
-@Controller()
+@Controller('/article')
 export class ArticleController {
   constructor(private readonly articleService: ArticleService) {}
 
   @Get()
-  getHello() {}
+  getHello() {
+    return {
+      message: 'Hello World!',
+    };
+  }
 }
