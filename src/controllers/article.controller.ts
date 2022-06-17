@@ -5,7 +5,7 @@ import { ArticleService } from '../services/article.service';
 export class ArticleController {
   constructor(private readonly articleService: ArticleService) {}
 
-  @Get()
+  @Get('/')
   getHello() {
     return {
       message: 'Hello World!',
