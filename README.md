@@ -1,2 +1,8 @@
-# tiny-book-blog-api
-《TypeScript 全面进阶指南》实战篇：基于 Nest + Prisma + Heroku ，开发部署你的 Node API
+# Nest Prisma API
+
+- 博客内容 API
+- Nest Prisma TypeScript
+- Middleware & Validation
+- Upload & OSS
+- DB & Deploy：Heroku
+- Marked & Render
