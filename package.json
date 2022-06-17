@@ -17,7 +17,7 @@
     "prisma:pull": "prisma db pull",
     "prisma:push": "prisma db push",
     "prisma:format": "prisma format",
-    "postinstall": "npm run prisma:generate"
+    "postinstall": "npm run prisma:gen"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
