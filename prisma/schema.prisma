@@ -3,9 +3,38 @@
 
 generator client {
   provider = "prisma-client-js"
+  // output   = "./client"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Tag {
+  id          String    @id @default(cuid())
+  name        String
+  description String?
+  Article     Article[]
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  description String?
+  Article     Article[]
+}
+
+model Article {
+  id          Int     @id @default(autoincrement())
+  title       String?
+  description String  @default("这篇文章还没有介绍...")
+  content     String
+
+  tag      Tag[]
+  category Category[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
