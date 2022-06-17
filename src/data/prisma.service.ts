@@ -1,20 +1,20 @@
 import {
   Injectable,
-  OnModuleInit,
   OnApplicationShutdown,
+  OnApplicationBootstrap,
 } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 
 @Injectable()
 export class PrismaService
   extends PrismaClient
-  implements OnModuleInit, OnApplicationShutdown
+  implements OnApplicationBootstrap, OnApplicationShutdown
 {
   constructor() {
     super();
   }
 
-  async onModuleInit() {
+  async onApplicationBootstrap() {
     await this.$connect();
   }
 
