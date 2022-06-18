@@ -12,3 +12,7 @@ export type TagUpdateInput = Prisma.TagUpdateInput & Prisma.TagWhereUniqueInput;
 export type CategoryCreateInput = Prisma.CategoryCreateInput;
 export type CategoryUpdateInput = Prisma.CategoryUpdateInput &
   Prisma.CategoryWhereUniqueInput;
+
+export type MaybeArray<T> = T | T[];
+
+export type MaybeNull<T> = T | null;

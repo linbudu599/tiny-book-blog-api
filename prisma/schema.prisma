@@ -10,6 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// 文章的标签，如 TS / Node / React / SSR 等
 model Tag {
   id          String    @id @default(cuid())
   name        String
@@ -17,6 +18,7 @@ model Tag {
   Article     Article[]
 }
 
+// 文章的分类，如 技术 / 感想 / 总结 等
 model Category {
   id          String    @id @default(cuid())
   name        String
@@ -30,10 +32,12 @@ model Article {
   description String  @default("这篇文章还没有介绍...")
   content     String
 
+  // 文章是否可见
+  visible Boolean @default(true)
+
   tag      Tag[]
   category Category[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
 }
-

@@ -22,6 +22,6 @@ export class SeedController {
       content: 'Content 3',
     });
 
-    return await this.articleService.query();
+    return await this.articleService.queryRecords();
   }
 }
